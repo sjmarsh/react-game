@@ -1,13 +1,173 @@
 body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  display: flex;
+  font-family: Arial, Helvetica, sans-serif;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+h1 {
+  padding: 0px;
+  margin: 0px;
+}
+
+.game-area {
+  width: 500px;
+  height: 640px;
+  position: absolute;
+  left: 80px;
+}
+
+.border-left {
+  width: 80px;
+  height: 730px;
+  position: absolute;
+  background-color: white;
+  z-index: +1;
+}
+
+.border-right {
+  left: 580px;
+  width: 80px;
+  height: 730px;
+  position: absolute;
+  background-color: white;
+  z-index: +1;
+}
+
+.message-area {
+  position: absolute;
+  top: 28%;
+  left: 50%;
+  width: 80%;
+  margin-left: -40%;
+  z-index: 5;
+}
+
+.sky {
+  width: 500px;
+  height: 330px;
+  position: absolute;
+}
+
+.sky-rural {
+  background-image: url(./images/sky/sky-rural.png);
+}
+
+.sky-desert {
+  background-image: url(./images/sky/sky-desert.png);
+}
+
+.sky-alpine {
+  background-image: url(./images/sky/sky-alpine.png);
+}
+
+.sky-city {
+  background-image: url(./images/sky/sky-city.png);
+}
+
+.sky-coast {
+  background-image: url(./images/sky/sky-coast.png);
+}
+
+.ground {
+  top: 330px;
+  width: 500px;
+  height: 310px;
+  position: absolute;
+  overflow: hidden;
+  z-index: -3;
+}
+
+.ground-rural {
+  background-image: url(./images/ground/ground-rural.png);
+}
+
+.ground-desert {
+  background-image: url(./images/ground/ground-desert.png);
+}
+
+.ground-alpine {
+  background-image: url(./images/ground/ground-alpine.png);
+}
+
+.ground-city {
+  background-image: url(./images/ground/ground-city.png);
+}
+
+.ground-coast {
+  background-image: url(./images/ground/ground-coast.png);
+}
+
+.road {
+  border-bottom: 310px solid #555;
+  border-left: 185px solid transparent;
+  border-right: 185px solid transparent;
+  height: 0px;
+  width: 130px;
+  position: absolute;
+  z-index: -2;
+}
+
+.player-car {
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 38px;
+  width: 92px;
+  position: absolute;
+  z-index: 0;
+}
+
+.ai-car {
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 38px;
+  width: 92px;
+  position: absolute;
+  z-index: 0;
+}
+
+.red-car {
+  background-image: url(./images/cars/red-car.png);
+}
+
+.green-car {
+  background-image: url(./images/cars/green-car.png);
+}
+
+.yellow-car {
+  background-image: url(./images/cars/yellow-car.png);
+}
+
+.blue-car {
+  background-image: url(./images/cars/blue-car.png);
+}
+
+.purple-car {
+  background-image: url(./images/cars/purple-car.png);
+}
+
+.orange-car {
+  background-image: url(./images/cars/orange-car.png);
+}
+
+.car-crash {
+  animation: crash 0.5s;
+  animation-fill-mode: forwards;
+}
+
+.fog {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(256,256,256,0.7);
+  z-index: 3;
+}
+
+/*Animations*/
+@keyframes crash {
+  from {
+      transform: rotate(0deg);
+  }
+  to {
+      transform: rotate(180deg);
+  }
 }

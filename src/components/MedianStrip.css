@@ -1,0 +1,8 @@
+.median-strip {
+    width: 5px;
+    left: 50%;
+    top: -20px;
+    height: 410px;
+    position: absolute;
+    z-index: -1;
+}
