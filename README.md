@@ -1,4 +1,4 @@
-#React Game
+# React Game
 
 Simple retro style racing game created using react. Ported from the original Blazor Game - [https://github.com/sjmarsh/BlazorGame](https://github.com/sjmarsh/BlazorGame "https://github.com/sjmarsh/BlazorGame")
 
